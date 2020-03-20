@@ -10,9 +10,15 @@
 		<script type="text/javascript" src="js/jquery.cxselect.min.js"></script>
 
 		<link rel="stylesheet" href="css/comon0.css">
+		<style>
+			body {
+				background-image: url(images/bg.jfif);
+				background-size: cover;
+			}
+		</style>
 	</head>
 	<body>
-		<div style="background:#000000;">
+		<div >
 			<div class="loading">
 				<div class="loadbox"> <img src="images/loading.gif"> 页面加载中... </div>
 			</div>
@@ -40,69 +46,59 @@
 			<div class="mainbox">
 				<ul class="clearfix">
 					<li>
-						<div class="boxall" style="height:340px">
+						<div class="boxall" style="height:400px">
 							<div class="alltitle">生存曲线(半年)</div>
 							<div class="navboxall echart3"></div>
 						</div>
 					</li>
 					<li>
-						<div class="boxall" style="height:340px">
+						<div class="boxall" style="height:400px">
 							<div class="alltitle">生存曲线(一年)</div>
 							<div class="navboxall echart3"></div>
 						</div>
 					</li>
 					<li>
-						<div class="boxall" style="height:340px">
+						<div class="boxall" style="height:400px">
 							<div class="alltitle">生存曲线(两年)</div>
 							<div class="navboxall echart3"></div>
 						</div>
 					</li>
-					<!-- <div class="boxall" style="height:400px;">
-							<div class="alltitle">标题样式1</div>
-							<div class="navboxall" id="echart5"></div>
-						</div> -->
 				</ul>
 				<ul class="clearfix">
 					<li>
-						<!-- <div class="boxall" style="height:350px">
-							<div class="alltitle">标题样式6</div>
-							<div class="navboxall" id="echart4"></div>
-						</div> -->
-						<div class="boxall" style="width:530px">
-							<div class="alltitle">风险因素</div>
+						<div class="boxall" style="width='100%'">
+							<div class="alltitle">生存曲线数据(半年)</div>
 							<div class="navboxall">
-								<table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
-									<tbody>
-										<tr>
-											<th scope="col" width=135px>Prediction Time</th>
-											<th scope="col" width=75px>Samples</th>
-											<th scope="col" width=120px>Average visits</th>
-											<th scope="col" width=60px>Death</th>
-											<th scope="col">Death rate(%)</th>
-										</tr>
-										<tr>
-											<td><span>Half of a year</span></td>
-											<td>2017</td>
-											<td>4.88<br></td>
-											<td>325<br></td>
-											<td>4.36<br></td>
-										</tr>
-										<tr>
-											<td><span>One year</span></td>
-											<td>1891</td>
-											<td>4.16</td>
-											<td>471</td>
-											<td>7.83</td>
-										</tr>
-
-										<tr>
-											<td><span>Two years</span></td>
-											<td>1638</td>
-											<td>4.08</td>
-											<td>620</td>
-											<td>12.97</td>
-										</tr>
-									</tbody>
+								<table class="table2" id='survival1' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall" style="width='100%'">
+							<div class="alltitle">生存曲线数据(一年)</div>
+							<div class="navboxall">
+								<table class="table2" id='survival2' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall" style="width='100%'">
+							<div class="alltitle">生存曲线数据(两年)</div>
+							<div class="navboxall">
+								<table class="table2" id='survival3' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="clearfix">
+					<li>
+						<div class="boxall" style="width:540px">
+							<div class="alltitle">死亡比例</div>
+							<div class="navboxall">
+								<table class="table2" id='death' width="100%" border="0" cellspacing="0" cellpadding="0">
 								</table>
 							</div>
 						</div>
@@ -113,7 +109,7 @@
 							<div class="navboxall" id="echart2"></div>
 						</div> -->
 						<div class="boxall" style="height:400px;">
-							<div class="alltitle">风险因素雷达图</div>
+							<div class="alltitle">死亡比例雷达图</div>
 							<div class="navboxall" id="echart1"></div>
 						</div>
 					</li>
@@ -137,26 +133,118 @@
 							<div class="navboxall echart2"></div>
 						</div>
 					</li> 
+					<li>
+						<div class="boxall">
+							<div class="alltitle">风险因素之间的关系(半年)</div>
+							<div class="navboxall">
+								<table class="table1" id='relation1' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall">
+							<div class="alltitle">风险因素之间的关系(一年)</div>
+							<div class="navboxall">
+								<table class="table1" id='relation2' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall">
+							<div class="alltitle">风险因素之间的关系(两年)</div>
+							<div class="navboxall">
+								<table class="table1" id='relation3' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
 				</ul>
 				<ul class="clearfix">
 					<li>
-						<div class="boxall" style="height:600px;">
+						<div class="boxall" style="height:500px;">
 							<div class="alltitle">hazards ratio(半年)</div>
 							<div class="navboxall echart4"></div>
 						</div>
 					</li> 
 					<li>
-						<div class="boxall" style="height:600px;">
+						<div class="boxall" style="height:500px;">
 							<div class="alltitle">hazards ratio(一年)</div>
 							<div class="navboxall echart4"></div>
 						</div>
 					</li> 
 					<li>
-						<div class="boxall" style="height:600px;">
+						<div class="boxall" style="height:500px;">
 							<div class="alltitle">hazards ratio(两年)</div>
 							<div class="navboxall echart4"></div>
 						</div>
 					</li> 
+					<li>
+						<div class="boxall">
+							<div class="alltitle">hazards ratio(半年)</div>
+							<div class="navboxall">
+								<table class="table2" id='hazards1' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall">
+							<div class="alltitle">hazards ratio(一年)</div>
+							<div class="navboxall">
+								<table class="table2" id='hazards2' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall">
+							<div class="alltitle">hazards ratio(两年)</div>
+							<div class="navboxall">
+								<table class="table2" id='hazards3' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="clearfix">
+					<li>
+						<div class="boxall" style="width:'100%'">
+							<div class="alltitle">pick 5 features half year</div>
+							<div class="navboxall">
+								<table class="table1" id='feature1' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall" style="width:'100%'">
+							<div class="alltitle">pick 4 features one year</div>
+							<div class="navboxall">
+								<table class="table1" id='feature2' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall" style="width:'100%'">
+							<div class="alltitle">pick 4 features two year</div>
+							<div class="navboxall">
+								<table class="table1" id='feature3' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="boxall" style="width:'100%'">
+							<div class="alltitle">pick 4 features new data</div>
+							<div class="navboxall">
+								<table class="table1" id='feature4' width="100%" border="0" cellspacing="0" cellpadding="0">
+								</table>
+							</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>

@@ -26,7 +26,6 @@ a:hover{ color:#06c; text-decoration: none!important}
 .pulll_left{float:left;}
 .pulll_right{float:right;}
 
-
 .loading{position:fixed; left:0; top:0; font-size:16px; z-index:100000000;width:100%; height:100%; background:#1a1a1c; text-align:center;}
 .loadbox{position:absolute; width:160px;height:150px; color: rgba(255,255,255,.6); left:50%; top:50%; margin-top:-100px; margin-left:-75px;}
 .loadbox img{ margin:10px auto; display:block; width:40px;}
@@ -41,9 +40,10 @@ a:hover{ color:#06c; text-decoration: none!important}
 .mainbox>ul{ margin-left:-.4rem; margin-right:-.4rem;}
 .mainbox>ul>li{ float: left; padding: 0 .4rem;}
 .mainbox>ul:nth-child(1)>li{ width: 33%;}
-.mainbox>ul:nth-child(2)>li:nth-child(2){ width: 35%;}
-.mainbox>ul:nth-child(3)>li{ width: 33%;}
+.mainbox>ul:nth-child(2)>li{ width: 100%;}
+.mainbox>ul:nth-child(3)>li:nth-child(2){ width: 35%;}
 .mainbox>ul:nth-child(4)>li{ width: 33%;}
+.mainbox>ul:nth-child(5)>li{ width: 33%;}
 
 .boxall{ padding:15px;  background: rgba(0,0,0,.2); position: relative; margin-bottom:15px;; z-index: 10;}
 .alltitle{ font-size:18px; color:#fff; position: relative; padding-left: 12px;margin-bottom: 10px;}
@@ -59,13 +59,20 @@ a:hover{ color:#06c; text-decoration: none!important}
 .numbt span{font-size: 18px; padding-left: 10px;color: #fff; }
 .numtxt{ color: #fef000; font-size: 80px; font-family: arial; border-top: 1px solid rgba(255,255,255,.1);border-bottom: 1px solid rgba(255,255,255,.1); padding: 10px 0; margin: 18px 0; font-weight: bold; letter-spacing: 2px;}
 
-.table1 th{border-bottom: 1px solid rgba(255,255,255,.2); font-size: 16px; color:rgba(255,255,255,.6); font-weight: normal; padding:0 0 10px 0;}
-.table1 td{ font-size: 16px; color:rgba(255,255,255,.4); padding: 15px 0 0 0; }
-.table1 span{ width: 24px; height: 24px; border-radius: 3px; display: block; background: #878787; color: #fff; line-height: 24px; text-align: center;}
+.table1{border-left:1px solid rgba(255,255,255,.2);border-top:1px solid rgba(255,255,255,.2);} 
+.table1 th{word-break: keep-all;white-space: nowrap;border-bottom: 1px solid rgba(255,255,255,.2);border-right:1px solid rgba(255,255,255,.2); font-size: 10px; color:rgba(255,255,255,1); font-weight: normal; padding:2px 2px 2px 2px;}
+.table1 td{border-bottom: 1px solid rgba(255,255,255,.2);border-right:1px solid rgba(255,255,255,.2); font-size: 10px; color:rgba(255,255,255,1); padding: 2px 2px 2px 2px;}
+.table1 span{ width: 100%; height: 90%; border-radius: 3px; display: block; background: #878787; color: #fff; text-align: center;}
 
-.table1 tr:nth-child(2) span{ background: #ed405d;width: 90%}
-.table1 tr:nth-child(3) span{ background: #f78c44;width: 90%}
-.table1 tr:nth-child(4) span{ background: #49bcf7;width: 90%}
+.table2{border-left:1px solid rgba(255,255,255,.2);border-top:1px solid rgba(255,255,255,.2);} 
+.table2 th{word-break: keep-all;white-space: nowrap;border-bottom: 1px solid rgba(255,255,255,.2);border-right:1px solid rgba(255,255,255,.2); font-size: 16px; color:rgba(255,255,255,1); font-weight: normal; padding:5px 5px 5px 5px;}
+.table2 td{border-bottom: 1px solid rgba(255,255,255,.2);border-right:1px solid rgba(255,255,255,.2); font-size: 16px; color:rgba(255,255,255,1); padding: 5px 5px 5px 5px;}
+.table2 span{ width: 100%; height: 90%; border-radius: 3px; display: block; background: #878787; color: #fff; text-align: center;}
+
+.table2 tr:nth-child(2) span{ background: #ed405d;}
+.table2 tr:nth-child(3) span{ background: #f78c44;}
+.table2 tr:nth-child(4) span{ background: #49bcf7;}
+
 .iconchart li{height: 30px;}
 .iconchart label{ color: #fff; line-height: 30px; height: 30px; display: inline-block; opacity: .8;}
 .iconchart label img{ display: inline-block; vertical-align: middle; opacity: .4;}
